@@ -235,7 +235,68 @@ elif figura == "круг":
 #---------------------
 #Задача №5
 #---------------------
+'''
+Напишите программу, которая получает на вход три целых числа,
+по одному числу в строке, и выводит на консоль в три строки сначала максимальное,
+потом минимальное, после чего оставшееся число.
 
+На ввод могут подаваться и повторяющиеся числа.
+'''
+a = int(input())
+b = int(input())
+c = int(input())
+
+if b <= a >= c:
+  maximum = a
+  if b >= c:
+    minimal = c
+    other = b
+  else:
+    minimal = b
+    other = c
+
+elif a <= b >= c:
+  maximum = b
+  if a >= c:
+    minimal = c
+    other = a
+  else:
+    minimal = a
+    other = c
+
+elif b <= c >= b:
+  maximum = c
+  if a >= b:
+    minimal = b
+    other = a
+  else:
+    minimal = a
+    other = b 
+print(maximum)
+print(minimal)
+print(other)
+# еще пару вариантов более лаконичных
+a,b,c = int(input()), int(input()), int(input())
+
+if a < b:
+	a, b = b, a
+if a < c:
+	a, c = c, a
+if b > c:
+	b, c = c, b
+print(a)
+print(b)
+print(c)
+#-----
+a=int(input())
+b=int(input())
+c=int(input())
+a, b = (a, b) if a >= b else (b, a)
+b, c = (b, c) if b >= c else (c, b)
+a, b = (a, b) if a >= b else (b, a)
+print(a)
+print(c)
+print(b)
 #---------------------
 #Задача №6
 #---------------------
