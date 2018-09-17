@@ -14,3 +14,13 @@
 не обращая внимания на то, что остались ещё не прочитанные значения.
 ...
 
+x = int (input())
+y = x
+z = 0 + abs(x ** 2)
+while y != 0:
+    x = int(input())
+    y = y + x
+    z = z + abs(x) ** 2
+    if y == 0:
+        break
+print(z)
